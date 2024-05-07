@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Snow Resort Website </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-snowflake"></i> snow resort</a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="package.html">package</a>
+            <a href="gallery.html">gallery</a>
+            <a href="members.html">Members</a>
+            <a href="book.html">Book</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+
+    <h2 style="text-align: center; margin-top: 50px;">Group members</h2>
+    <ul id="group-members" style="text-align: center; margin-top: 50px; font-size: 25px;">
+
+        <li style="color: #03045e;"> اريام نصار</li>
+        <li style="color: #4581cf;">Group Mmeber</li>
+
+    </ul>
+
+    <script>
+        function getRandomIndex(maxIndex) {
+            return Math.floor(Math.random() * maxIndex);
+        }
+
+        function displayGroupMembers() {
+            var groupMembersList = document.getElementById('group-members');
+            var members = groupMembersList.children;
+            var numMembers = members.length;
+
+            for (var i = numMembers - 1; i > 0; i--) {
+                var randomIndex = getRandomIndex(i + 1);
+                groupMembersList.appendChild(members[randomIndex]);
+            }
+        }
+
+        displayGroupMembers();
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
