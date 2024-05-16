@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>function handleOnSubmit(event) {
-            event.preventDefault(); 
-            alert("The form is submitted. we'll reach you you as soon as we can!");
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,7 +124,7 @@
                 <p>infoSnow_Resort@mail.com</p>
             </div>
         </div>
-        <form class="contact-form"  onsubmit="handleOnSubmit(event)">
+        <form class="contact-form" >
             <input type="text" name="name" placeholder="Your Name" pattern="[A-Za-z\s]+" title="Please enter a valid name (letters only)" required>
             <input type="email" name="email" placeholder="Your Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
